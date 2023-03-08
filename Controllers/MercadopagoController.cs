@@ -17,7 +17,7 @@ namespace webapi.Controllers;
 [Route("/")]
 public class MercadopagoController : ControllerBase
 {
-      [HttpPost]
+    [HttpPost]
     [Route("process-payment")]
     public async Task<ProcessPaymentResponse> ProcessPayment(ProcessPaymentRequest paymentRequest)
     {
