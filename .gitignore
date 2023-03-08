@@ -2,7 +2,7 @@ node_modules/
 .env
 logs
 *.log
-webapi/.vs/
-webapi/obj/
-webapi/bin/
+.vs/
+obj/
+bin/
 package-lock.json
