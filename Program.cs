@@ -12,9 +12,9 @@ builder.Services.AddCors(options =>
     options.AddPolicy("CorsPolicy", corsBuilder =>
     {
         //corsBuilder.WithMethods("POST");
-
         corsBuilder.AllowAnyOrigin();
         corsBuilder.AllowAnyMethod();
+        corsBuilder.AllowAnyHeader();
     });
 });
 

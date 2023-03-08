@@ -1,0 +1,8 @@
+node_modules/
+.env
+logs
+*.log
+webapi/.vs/
+webapi/obj/
+webapi/bin/
+package-lock.json
