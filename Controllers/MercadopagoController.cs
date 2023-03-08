@@ -71,33 +71,6 @@ public class MercadopagoController : ControllerBase
         var client = new PreferenceClient();
         Preference preference = await client.CreateAsync(request);
         processPaymentResponse.UrlCheckout = preference.SandboxInitPoint;
-        //var request = new PaymentCreateRequest
-        //{
-        //    TransactionAmount = paymentRequest.TransactionAmount,
-        //    Token = paymentRequest.Token,
-        //    Description = paymentRequest.Description,
-        //    Installments = paymentRequest.Installments,
-        //    PaymentMethodId = paymentRequest.PaymentMethodId,
-        //    Payer = new PaymentPayerRequest
-        //    {
-        //        Email = paymentRequest.Payer.Email,
-        //        Identification = new MercadoPago.Client.Common.IdentificationRequest
-        //        {
-        //            Type = paymentRequest.Payer.Identification.Type,
-        //            Number = paymentRequest.Payer.Identification.Number
-        //        }
-        //    }
-        //};
-
-        //var client = new PaymentClient();
-        //Payment payment = await client.CreateAsync(request);
-
-        //Console.WriteLine($"Payment: {Newtonsoft.Json.JsonConvert.SerializeObject(payment)}");
-
-        //processPaymentResponse.Status = payment.Status;
-        //processPaymentResponse.Detail = payment.StatusDetail;
-        //processPaymentResponse.Id = payment.Id;
-        //processPaymentResponse.IsError = false;
 
         return processPaymentResponse;
     }
