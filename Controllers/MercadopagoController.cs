@@ -18,8 +18,8 @@ namespace webapi.Controllers;
 public class MercadopagoController : ControllerBase
 {
     [HttpPost]
-    [Route("process-payment")]
-    public async Task<ProcessPaymentResponse> ProcessPayment(ProcessPaymentRequest paymentRequest)
+    [Route("redirect-mercadopago")]
+    public async Task<ProcessPaymentResponse> RedirectMercadopago(ProcessPaymentRequest paymentRequest)
     {
         ProcessPaymentResponse processPaymentResponse = new ProcessPaymentResponse();
 
@@ -35,10 +35,10 @@ public class MercadopagoController : ControllerBase
         {
             new PreferenceItemRequest
             {
-                Title = "Meu produto",
-                Quantity = 1,
-                CurrencyId = "BRL",
-                UnitPrice = 75.56m,
+                Title = paymentRequest.Title,
+                Quantity = paymentRequest.Quantity,
+                CurrencyId = paymentRequest.CurrencyId,
+                UnitPrice = paymentRequest.UnitPrice,
             },
         },
             };
