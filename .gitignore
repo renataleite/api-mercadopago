@@ -6,3 +6,7 @@ logs
 obj/
 bin/
 package-lock.json
+
+# Arquivos específicos
+api-mercadoPago/bin/
+api-mercadoPago/obj/
